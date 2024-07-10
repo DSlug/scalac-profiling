@@ -9,6 +9,8 @@
 
 import xsbti.compile.CompileAnalysis
 
+ThisBuild / version := "0.1-SNAPSHOT"
+
 lazy val root = project
   .in(file("."))
   .aggregate(profiledb, plugin, profilingSbtPlugin)
@@ -24,7 +26,7 @@ lazy val root = project
         (integrations / watchSources).value
   )
 
-val bin212 = Seq("2.12.18", "2.12.17", "2.12.16", "2.12.15", "2.12.14", "2.12.13")
+val bin212 = Seq("2.12.18")
 val bin213 = Seq("2.13.12", "2.13.11", "2.13.10", "2.13.9", "2.13.8", "2.13.7", "2.13.6", "2.13.5")
 
 // Copied from
